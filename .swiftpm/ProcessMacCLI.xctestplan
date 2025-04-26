@@ -1,0 +1,28 @@
+{
+  "configurations" : [
+    {
+      "id" : "81FC7F89-B48D-42BD-9280-5C6A0027FB9F",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:",
+      "identifier" : "ProcessMacCLI",
+      "name" : "ProcessMacCLI"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "ProcessMacCLITests",
+        "name" : "ProcessMacCLITests"
+      }
+    }
+  ],
+  "version" : 1
+}

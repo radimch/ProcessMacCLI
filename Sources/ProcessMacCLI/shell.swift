@@ -9,7 +9,7 @@ import Foundation
 /*
   Runs multiline command 'command' in shell (/bin/zsh - is always present in MacOS) and returns the output.
  */
-func shell(_ command: String) -> String {
+public func shell(_ command: String) -> String {
   let process = Process()
   let pipe = Pipe()
 
