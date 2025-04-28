@@ -15,7 +15,7 @@ ProcessMacCLI is a single-click command line tool, that grabs and displays runni
 5. Scroll down to `Privacy and security` and on the right panel scroll down to `Security` section and push the button `Run anyway` on the right side of `ProcessMacCLI` app
    <img src="https://github.com/user-attachments/assets/ff7ec8fd-22c8-43ac-9a7b-9e4cb6073ec4" alt="Privacy and security... Run anyway" width="713"/>
 
-   The system may ask you for authorization (either password or fingerprint) and when pop-up window raises, click `Open Anyway`
+   The system may ask you for authorization (password) and when pop-up window raises, click `Open Anyway`
    <img src="https://github.com/user-attachments/assets/4dec67f8-8500-413e-a72f-c51536a2ec87" alt="Open anyway" width="278"/>
 
    The ProcessMacCLI app want to save the it's output to your filesystem, so allow it by clicking to `Allow` button
