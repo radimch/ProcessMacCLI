@@ -26,19 +26,26 @@ The ProcessMacCLI app want to save the it's output to your filesystem, so allow 
 
 <img src="https://github.com/user-attachments/assets/29686ebb-eebc-4e1d-ac9e-76ab16d49fcc" alt="ProcessMacCLI" width="1418"/>
 
-Colums:
-1. User that run the process
-2. PID - Process ID
-3. CPU usage 
-4. Memory consumption
-5. Time (or date) of start of the process
-6. Whole commandline together with paramters
+Colums in the table output:
+1. User - User that run the process
+2. PID - Process Identifier
+3. %CPU - Percentage of processor usage 
+4. %MEM - Percentage of RAM memory consumption
+5. STARTED - Time (or date in case of more than 24 hours) of start of the process
+6. TIME - Time of CPU consumed by the process
+7. COMMAND - Whole commandline together with paramters
 
 *********
 
 ### For Mac (shell, swift) developers:
-The implementation of `ProcessMacCLI` uses mac shell (`zsh`) - since MacOS is a BSD based system.
+The implementation of `ProcessMacCLI` uses mac shell (`/bin/zsh`) - since MacOS is a BSD based system, it should be present.
 
-On top of it it `Swift` language has been used as most natural choice, because default development environment `XCode` comes with support of Swift out of the box.
+On top of it it `swift` language has been used as a most natural choice, because the default development environment `XCode` comes with support of `swift` out of the box.
 
-`ProcessMacCLI` relies on presence of BSD version of `ps` command, executing standard `ps aux`
+`ProcessMacCLI` relies on presence of BSD version of `ps` command, executing standard `ps aux` with columns VSZ, RASS and TT filtered out.
+```
+rchlad@apollo25 ~ % ps aux | head -n2
+USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
+rchlad            1155   9.2  0.9 412744400 151680   ??  S    18Apr25 131:26.43 /Applications/iTerm.app/Contents/MacOS/iTerm2
+```
+
