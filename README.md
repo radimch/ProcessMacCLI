@@ -1,21 +1,16 @@
-## Task:
-Prepare a CLI tool to create a detailed report of running processes on a MacBook. This tool assesses your practical skills in developing portable, secure, and user-friendly utilities.
+## ProcessMacCLI
+ProcessMacCLI is a single-click command line tool, that grabs and displays running processes on a MacBook.
 
-## Your CLI tool must:
-1. Generate a Comprehensive Report:
-- List running processes, including details such as process ID (PID), name, user, CPU usage, and memory usage.
-- Output the report in an easily visualizable format (CSV or JSON).
+### For Mac Users:
 
-2. Visualization:
-- Document how the generated report can be visualized using readily accessible tools (e.g., Excel, Google Sheets, or open-source visualization software).
-- Include a sample visualization demonstrating metrics such as total running processes per user.
+Simply download [ProcessMacCLI.zip](https://github.com/user-attachments/files/19943628/ProcessMacCLI.zip) anywhere to your local disk, unzip it, and execute the binary ProcessMacCLI inside.
 
-3. Portability and Ease of Use:
-- Ensure the CLI tool can be executed from any directory (e.g., Downloads, Documents).
-- Avoid external dependencies or provide clear, justified reasons if you choose to include any.
+It automatically makes snapshot of all running processes on your local Mac and saves it as `<timestamp>-<computer-name>.csv` e.g. `200250428-182400-MyMac.csv` file on your Desktop while opening it at the same time in Excell (or other associated table processor) to visualize the data on your screen. You can optionally edit & save it thereafter.
 
-4. Documentation and CI Integration:
-- Include a clear README file in your repository detailing installation, execution, example usage, and troubleshooting tips.
-- Implement a simple Continuous Integration (CI) pipeline (using GitHub Actions, GitLab CI, or similar) that automatically checks the tool's basic functionality upon code changes.
 
----
+### For Mac (shell, swift) developers:
+The implementation of `ProcessMacCLI` uses mac shell (`zsh`) - since MacOS is a BSD based system.
+
+On top of it it `Swift` language has been used as most natural choice, because default development environment `XCode` comes with support of Swift out of the box.
+
+`ProcessMacCLI` relies on presence of BSD version of `ps` command, executing standard `ps aux`
