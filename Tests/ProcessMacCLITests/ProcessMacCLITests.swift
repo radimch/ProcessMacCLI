@@ -15,8 +15,8 @@ final class ProcessMacCLITests: XCTestCase {
     func testShellEcho() throws {
         let outputString = "Hello, world!"
         let actual = shell("""
-                echo \(outputString) | tr -d "\n"§
-                """)
+                echo \(outputString)
+                """).trimmingCharacters(in: .whitespacesAndNewlines)
         let expected = outputString
 
         XCTAssertEqual(actual, expected)
@@ -28,13 +28,12 @@ final class ProcessMacCLITests: XCTestCase {
       USER               PID  %CPU %MEM      VSZ    RSS   TT  STAT STARTED      TIME COMMAND
       % ps aux | head -n1 | wc -w
       11
-      ( The final tr -d "\n"$ removes trailing new line )
      */
     func testShellPsAux() throws {
         let expected = "11"
         let actual = shell("""
-                 ps aux | head -n1 | wc -w | tr -d "\n"
-            """)
+                 ps aux | head -n1 | wc -w 
+            """).trimmingCharacters(in: .whitespacesAndNewlines)
         
         XCTAssertEqual(actual, expected)
     }

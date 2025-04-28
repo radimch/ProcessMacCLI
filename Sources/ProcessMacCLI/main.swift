@@ -39,12 +39,12 @@ func getProcesses() {
     
     // retrieve current date and time with timezone in format YYYYmmdd-HHMMSS-ZONE
     let date = shell("""
-        date "+%Y%m%d-%H%M%S-%Z" | tr -d "\n"
-    """)
+        date "+%Y%m%d-%H%M%S-%Z"
+    """).trimmingCharacters(in: .whitespacesAndNewlines)
     // retrieve name of the local machine
     let uname = shell("""
-        uname -n | tr -d "\n"
-    """)
+        uname -n
+    """).trimmingCharacters(in: .whitespacesAndNewlines)
 
     // Step 2: Save to file to desktop
     let fileName = "\(date)-\(uname).csv"
