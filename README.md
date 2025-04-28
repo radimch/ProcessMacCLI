@@ -15,13 +15,15 @@ ProcessMacCLI is a single-click command line tool, that grabs and displays runni
 5. Scroll down to `Privacy and security` and on the right panel scroll down to `Security` section and push the button `Run anyway` on the right side of `ProcessMacCLI` app
    <img src="https://github.com/user-attachments/assets/ff7ec8fd-22c8-43ac-9a7b-9e4cb6073ec4" alt="Privacy and security... Run anyway" width="713"/>
 
-The system may ask you for authorization (either password or fingerprint) and when pop-up window raises, click `Open Anyway`
- <img src="https://github.com/user-attachments/assets/4dec67f8-8500-413e-a72f-c51536a2ec87" alt="Open anyway" width="278"/>
+   The system may ask you for authorization (either password or fingerprint) and when pop-up window raises, click `Open Anyway`
+   <img src="https://github.com/user-attachments/assets/4dec67f8-8500-413e-a72f-c51536a2ec87" alt="Open anyway" width="278"/>
 
-The ProcessMacCLI app want to save the it's output to your filesystem, so allow it by clicking to `Allow` button
- <img src="https://github.com/user-attachments/assets/008b6bc4-be5e-47a4-b776-74edd426f474" alt="Access filesystem" width="277"/>
+   The ProcessMacCLI app want to save the it's output to your filesystem, so allow it by clicking to `Allow` button
+   <img src="https://github.com/user-attachments/assets/008b6bc4-be5e-47a4-b776-74edd426f474" alt="Access filesystem" width="277"/>
+ 
+   _*NOTE WELL:*_ All this settings stuff is needed only on first run of the app.
 
- 6. Finally it runs, automatically takes snapshot of all running processes on your local Mac and saves it as `<timestamp>-<computer-name>.csv`
+6. Finally it runs, automatically takes snapshot of all running processes on your local Mac and saves it as `<timestamp>-<computer-name>.csv`
     e.g. `200250428-182400-MyMac.csv` file on your Desktop while opening it at the same time in Excell (or other associated table processor) to visualize the data on your screen. You can optionally edit & save it thereafter.
 
 <img src="https://github.com/user-attachments/assets/29686ebb-eebc-4e1d-ac9e-76ab16d49fcc" alt="ProcessMacCLI" width="1418"/>
