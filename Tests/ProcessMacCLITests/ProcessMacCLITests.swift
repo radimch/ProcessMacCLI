@@ -33,7 +33,7 @@ final class ProcessMacCLITests: XCTestCase {
     func testShellPsAux() throws {
         let expected = "11"
         let actual = shell("""
-                 ps aux | head -n1 | wc -w | tr -d "\n"§
+                 ps aux | head -n1 | wc -w | tr -d "\n"
             """)
         
         XCTAssertEqual(actual, expected)
